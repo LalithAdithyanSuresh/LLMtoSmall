@@ -9,12 +9,19 @@ Input:
 
 
 Logic:
-if there are no rows or If no semantically similar task is found, output {{"same": 0,"taskId":<next_taskId(natural)>, "taskName" : <proper_max_5_word_name>,"datasetClean" : <a dataset cleanning command using pandas datafram named 'df'>}}.
+if there are no rows or If no semantically similar task is found, output {{"same": 0,"taskId":<next_taskId(natural)>, "taskName" : <proper_max_5_word_name>,"datasetClean" : <a dataset cleanning command using pandas dataframe named 'df'>}}.
 If the target task has the same meaning, intent, or is highly related to a task in the rows, output {{"same": 1, "taskId": <id>}}.
+
+Dataset Cleaning Rules (MUST FOLLOW):
+1. The datasetClean command must result in a pandas DataFrame named 'df' with exactly two columns: 'row_number' (integer) and 'text' (string).
+2. You MUST rename the column containing the main text content to 'text' (e.g., if the column is named 'review', rename it to 'text' using `.rename(columns={{'review': 'text'}})`).
+3. Create 'row_number' from the index (e.g., `.reset_index().rename(columns={{'index': 'row_number'}})`).
+4. Example: "df = df.dropna(subset=[['review']]).reset_index().rename(columns={{'index': 'row_number', 'review': 'text'}})[['row_number', 'text']]"
 
 Constraints:
 Return only the JSON object.
-No markdown formatting, no explanations, no text."""
+No markdown formatting, no explanations, no text.
+Do not wrap in python code blocks. Output raw JSON only."""
 
 GET_SCORE_PREDICTIONS = """Act as an expert data analyst and machine learning engineer. Your task is to perform a regression analysis on the provided dataset to classify the following goal: {{ $('On form submission').item.json['Task to do'] }}
 
@@ -46,14 +53,18 @@ Input:
 - Number of rows already trained: {}
 
 Rules:
-1. If the R-squared (r2) score on unseen data (unseen_data_metrics) is less than 0.8, the model performance is considered poor or underfitting. It needs more training data.
-2. If more data is needed, set "retrain" to true, and suggest "additional_rows" to fetch (e.g., 50, 100, or 200 depending on how poor the metrics are).
-3. If the R-squared score on unseen data is 0.8 or higher, or if we have reached a limit of 1000 total rows, set "retrain" to false.
+1. Dynamically evaluate model metrics. The ultimate goal is to use this student model to run predictions on the remaining dataset (5728 rows total) to save LLM API token costs.
+2. Balance performance vs. cost: If the R-squared (r2) score on unseen data (unseen_data_metrics) is showing diminishing returns (e.g. barely improving from 0.78 to 0.79 with more data), or if it is already reasonably high (e.g. ~0.75 or above) and sufficient for the task, set "retrain" to false to save on expensive Gemini labeling runs.
+3. Only request retraining ("retrain": true) if the performance is clearly inadequate and showing strong potential to improve significantly with more targeted training rows.
+4. Recommend a "confidence_threshold" (float, e.g., 0.75-0.85) representing the minimum acceptable prediction confidence based on the validation uncertainty metrics.
+5. Recommend a "min_trust_threshold" (float, e.g., 0.60-0.70) representing the absolute lower limit of confidence below which the model's prediction is completely untrustworthy.
 
 Output JSON format:
 {{
   "retrain": boolean,
   "additional_rows": number,
+  "confidence_threshold": float,
+  "min_trust_threshold": float,
   "reason": "string explaining why"
 }}
 
