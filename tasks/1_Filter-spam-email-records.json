@@ -1,8 +1,0 @@
-{
-    "taskId": 1,
-    "taskName": "Filter spam email records",
-    "fileName": "1_Filter-spam-email-records.csv",
-    "rows_predicted": 0,
-    "best_model_metricts": null,
-    "rows_used": []
-}

@@ -1,0 +1,909 @@
+{
+    "taskId": 1,
+    "taskName": "Extract spam email text",
+    "fileName": "1_Extract-spam-email-text.csv",
+    "rows_predicted": 180,
+    "best_model_metricts": null,
+    "rows_used": [
+        {
+            "row_number": 0,
+            "score": 0.05,
+            "reason": "Internal business correspondence regarding conference logistics; no indicators of spam."
+        },
+        {
+            "row_number": 1,
+            "score": 0.05,
+            "reason": "Professional communication between colleagues regarding a course; no spam indicators."
+        },
+        {
+            "row_number": 2,
+            "score": 0.05,
+            "reason": "Follow-up professional email regarding work deliverables; context is clearly legitimate."
+        },
+        {
+            "row_number": 3,
+            "score": 0.05,
+            "reason": "Technical discussion between professional peers regarding financial modeling; no unsolicited or malicious content."
+        },
+        {
+            "row_number": 4,
+            "score": 0.05,
+            "reason": "Inquiry regarding internal data and company resources; standard professional interaction."
+        },
+        {
+            "row_number": 5,
+            "score": 0.65,
+            "reason": "Contains characteristics of unsolicited promotional email (invitation to a third-party site for classified ads), though potentially personal in tone."
+        },
+        {
+            "row_number": 6,
+            "score": 0.05,
+            "reason": "Internal administrative email regarding departmental allocations; legitimate business context."
+        },
+        {
+            "row_number": 7,
+            "score": 0.05,
+            "reason": "Coordination of a professional dinner meeting; clearly authentic business scheduling."
+        },
+        {
+            "row_number": 8,
+            "score": 0.05,
+            "reason": "Internal personnel/recruitment discussion; standard corporate communication chain."
+        },
+        {
+            "row_number": 9,
+            "score": 0.98,
+            "reason": "Classic phishing attempt: utilizes fear tactics (account compromised), urgent tone, and requests the user to click a link to 'verify identity' for a financial institution."
+        },
+        {
+            "row_number": 10,
+            "score": 0.95,
+            "reason": "Classic unsolicited marketing spam promoting search engine submission services, including high-pressure sales language and an opt-out footer."
+        },
+        {
+            "row_number": 11,
+            "score": 0.05,
+            "reason": "Internal business communication regarding financial probability analysis; contains professional context and specific project details."
+        },
+        {
+            "row_number": 12,
+            "score": 0.85,
+            "reason": "Mass-market promotional email for a commercial training course; contains excessive marketing 'click here' links and promotional language typical of unsolicited bulk email."
+        },
+        {
+            "row_number": 13,
+            "score": 0.05,
+            "reason": "Legitimate business correspondence regarding the shipment and invoicing of professional books."
+        },
+        {
+            "row_number": 14,
+            "score": 0.02,
+            "reason": "Short, legitimate personal or professional reply."
+        },
+        {
+            "row_number": 15,
+            "score": 0.1,
+            "reason": "System-generated delivery failure notification. While automated, it is functional server messaging rather than unsolicited marketing spam."
+        },
+        {
+            "row_number": 16,
+            "score": 0.1,
+            "reason": "Internal company IT announcement regarding system access, security protocols, and password requirements."
+        },
+        {
+            "row_number": 17,
+            "score": 0.05,
+            "reason": "Internal business discussion regarding web strategy, project coordination, and brand positioning."
+        },
+        {
+            "row_number": 18,
+            "score": 0.05,
+            "reason": "Internal corporate email regarding charity participation and department personnel updates."
+        },
+        {
+            "row_number": 19,
+            "score": 0.98,
+            "reason": "High-confidence spam. Contains common pharmaceutical spam indicators, obfuscated text, and irregular character insertion intended to bypass filters."
+        },
+        {
+            "row_number": 20,
+            "score": 0.95,
+            "reason": "Classic phishing email: uses urgent language, claims a software upgrade, and directs the user to an external link to provide sensitive account information."
+        },
+        {
+            "row_number": 21,
+            "score": 0.05,
+            "reason": "Internal corporate communication regarding IT/system installation; lacks any characteristics of spam."
+        },
+        {
+            "row_number": 22,
+            "score": 0.1,
+            "reason": "Internal scheduling email for candidate interviews; contains a standard disclaimer, but the content is clearly business-related correspondence."
+        },
+        {
+            "row_number": 23,
+            "score": 0.05,
+            "reason": "Internal professional discussion between colleagues regarding a third-party contact; no indicators of unsolicited marketing or malicious intent."
+        },
+        {
+            "row_number": 24,
+            "score": 0.2,
+            "reason": "Educational newsletter from an academic institution; while it is bulk communication, it appears to be a legitimate opt-in or internal mailing, not malicious spam."
+        },
+        {
+            "row_number": 25,
+            "score": 0.05,
+            "reason": "Internal office communication regarding account access rights; context is professional and task-oriented."
+        },
+        {
+            "row_number": 26,
+            "score": 0.1,
+            "reason": "Recruitment/hiring correspondence; internal processing of a job applicant's resume."
+        },
+        {
+            "row_number": 27,
+            "score": 0.05,
+            "reason": "Professional follow-up email from a job candidate thanking the interviewer; personal and legitimate."
+        },
+        {
+            "row_number": 28,
+            "score": 0.05,
+            "reason": "Internal planning for a corporate presentation and social event; clearly legitimate business communication."
+        },
+        {
+            "row_number": 29,
+            "score": 0.98,
+            "reason": "High-confidence spam; unsolicited financial/annuity promotion, use of opt-out language, and generic contact forms."
+        },
+        {
+            "row_number": 30,
+            "score": 0.05,
+            "reason": "Professional corporate communication regarding an interview schedule; lacks any indicators of spam."
+        },
+        {
+            "row_number": 31,
+            "score": 0.05,
+            "reason": "Internal business correspondence discussing complex financial risk modeling and data methodology; authentic professional context."
+        },
+        {
+            "row_number": 32,
+            "score": 0.1,
+            "reason": "Legitimate business email forwarding a resume for an internship; includes personal context and standard professional sign-offs."
+        },
+        {
+            "row_number": 33,
+            "score": 0.95,
+            "reason": "Classic spam pattern: promotion of discounted software with a suspicious link from an unrecognized domain."
+        },
+        {
+            "row_number": 34,
+            "score": 0.98,
+            "reason": "Contains common spam tactics including health/enhancement product solicitation, fabricated testimonials, and disjointed, nonsensical filler text used to bypass spam filters."
+        },
+        {
+            "row_number": 35,
+            "score": 0.1,
+            "reason": "Standard automated distribution of a recurring industry report; clear identification of the source and contact information."
+        },
+        {
+            "row_number": 36,
+            "score": 1.0,
+            "reason": "Explicit unsolicited commercial adult content, 'click here' phishing patterns, and unsubscribe instructions typical of mass-market spam."
+        },
+        {
+            "row_number": 37,
+            "score": 0.05,
+            "reason": "Internal corporate policy communication regarding employee stock option programs; professional tone and relevant context."
+        },
+        {
+            "row_number": 38,
+            "score": 0.05,
+            "reason": "Internal discussion regarding HR processes and recruitment difficulties; professional discourse between employees."
+        },
+        {
+            "row_number": 39,
+            "score": 1.0,
+            "reason": "High-confidence spam featuring medical solicitation (viagra/cialis), intentional misspellings to avoid filters, and aggressive 'click here' calls to action."
+        },
+        {
+            "row_number": 40,
+            "score": 0.98,
+            "reason": "Promotional spam content offering unsolicited commercial services with typical 'click here' call-to-actions and high-pressure marketing language."
+        },
+        {
+            "row_number": 41,
+            "score": 0.05,
+            "reason": "Internal business communication regarding project tasks; contains no indicators of spam."
+        },
+        {
+            "row_number": 42,
+            "score": 0.1,
+            "reason": "System-generated automated mail delivery status notification; legitimate technical traffic."
+        },
+        {
+            "row_number": 43,
+            "score": 0.95,
+            "reason": "Unsolicited mortgage/financial refinancing advertisement with a suspicious link for database deletion, characteristic of phishing/spam."
+        },
+        {
+            "row_number": 44,
+            "score": 0.02,
+            "reason": "Standard business scheduling and coordination email; legitimate professional correspondence."
+        },
+        {
+            "row_number": 45,
+            "score": 1.0,
+            "reason": "Classic 'Nigerian Prince' style 419 advance-fee fraud scam soliciting illegal movement of funds."
+        },
+        {
+            "row_number": 46,
+            "score": 0.9,
+            "reason": "Contains a mail failure notice that includes spam content (viagra advertisement) from a previous failed relay attempt."
+        },
+        {
+            "row_number": 47,
+            "score": 0.95,
+            "reason": "Another example of advance-fee fraud/scam involving a fictitious diamond-rich consignment, identified by the sender as spam."
+        },
+        {
+            "row_number": 48,
+            "score": 0.05,
+            "reason": "Professional email thread regarding job interview scheduling; legitimate human communication."
+        },
+        {
+            "row_number": 49,
+            "score": 0.92,
+            "reason": "Unsolicited mass-marketing advertisement for travel services, including typical commercial promotional elements and opt-out requests."
+        },
+        {
+            "row_number": 50,
+            "score": 0.0,
+            "reason": "This is an internal corporate communication regarding organizational restructuring and team reporting lines."
+        },
+        {
+            "row_number": 51,
+            "score": 0.0,
+            "reason": "This is a legitimate business correspondence regarding HR tasks, project bonuses, and internal meeting coordination."
+        },
+        {
+            "row_number": 52,
+            "score": 0.95,
+            "reason": "This email displays classic spam characteristics: unsolicited sales solicitation for products, suspicious subject line, and an opt-out link."
+        },
+        {
+            "row_number": 53,
+            "score": 0.0,
+            "reason": "This is an internal request between an employee and a manager regarding vacation time rollover."
+        },
+        {
+            "row_number": 54,
+            "score": 0.0,
+            "reason": "This is a thread of professional correspondence coordinating a telephone job interview for a candidate."
+        },
+        {
+            "row_number": 55,
+            "score": 0.0,
+            "reason": "This is a legitimate business email chain concerning legal software licensing agreements and escrow documents."
+        },
+        {
+            "row_number": 56,
+            "score": 0.1,
+            "reason": "This is a genuine job inquiry from an individual to a company executive; while unsolicited, it is not commercial mass-market spam."
+        },
+        {
+            "row_number": 57,
+            "score": 0.0,
+            "reason": "This is a professional seasonal greeting and follow-up communication between business associates."
+        },
+        {
+            "row_number": 58,
+            "score": 0.0,
+            "reason": "This is an internal team communication regarding a technical document and financial modeling research."
+        },
+        {
+            "row_number": 59,
+            "score": 0.0,
+            "reason": "This is a professional exchange between a university/educational administrator and a professor regarding student grades."
+        },
+        {
+            "row_number": 60,
+            "score": 0.05,
+            "reason": "Professional corporate communication regarding internal project management and research coordination. No indicators of spam."
+        },
+        {
+            "row_number": 61,
+            "score": 0.95,
+            "reason": "Classic marketing solicitation featuring common spam markers: suspicious character spacing, generic 'revamp your business' sales pitch, and a call to action for commercial web services."
+        },
+        {
+            "row_number": 62,
+            "score": 0.98,
+            "reason": "Highly characteristic of phishing or predatory financial spam, including unsolicited pre-approval notices, arbitrary account IDs, and links to a non-legitimate domain for lead collection."
+        },
+        {
+            "row_number": 63,
+            "score": 0.92,
+            "reason": "Typical 'pump and dump' stock solicitation disguised as a newsletter, featuring hyper-optimistic financial forecasts, disclaimers regarding conflict of interest, and high-pressure sales language."
+        },
+        {
+            "row_number": 64,
+            "score": 0.0,
+            "reason": "Standard internal professional correspondence regarding a resume submission."
+        },
+        {
+            "row_number": 65,
+            "score": 0.99,
+            "reason": "Clear spam/scam email targeting pharmaceutical sales with characteristic obfuscated text, spelling errors, and common illicit keywords."
+        },
+        {
+            "row_number": 66,
+            "score": 0.0,
+            "reason": "Legitimate business email coordinating travel expense reimbursement between academic and corporate entities."
+        },
+        {
+            "row_number": 67,
+            "score": 0.05,
+            "reason": "Professional inquiry regarding a speaking engagement at a legitimate risk management conference."
+        },
+        {
+            "row_number": 68,
+            "score": 0.0,
+            "reason": "Internal corporate HR communication regarding candidate interviews and recruitment logistics."
+        },
+        {
+            "row_number": 69,
+            "score": 0.0,
+            "reason": "Legitimate professional scheduling email regarding a visit from external business partners (Petronas executives)."
+        },
+        {
+            "row_number": 70,
+            "score": 0.05,
+            "reason": "Internal corporate business communication regarding a credit model. No indicators of unsolicited spam."
+        },
+        {
+            "row_number": 71,
+            "score": 0.98,
+            "reason": "Classic pharmaceutical spam: promotes impotence medication, contains suspicious external links, and uses typical spam formatting."
+        },
+        {
+            "row_number": 72,
+            "score": 0.85,
+            "reason": "Contains common spam characteristics including unsolicited links, vague subject lines, and irrelevant personal content often used in bot-generated phishing."
+        },
+        {
+            "row_number": 73,
+            "score": 0.02,
+            "reason": "Legitimate internal corporate announcement regarding business strategy and organizational structure."
+        },
+        {
+            "row_number": 74,
+            "score": 0.1,
+            "reason": "Professional coordination for a job interview. Includes a footer link that is a standard automatic inclusion by email providers, not spam."
+        },
+        {
+            "row_number": 75,
+            "score": 0.05,
+            "reason": "Internal discussion regarding public relations and corporate reputation management."
+        },
+        {
+            "row_number": 76,
+            "score": 0.05,
+            "reason": "Technical internal memo regarding quantitative financial modeling and risk pricing."
+        },
+        {
+            "row_number": 77,
+            "score": 0.05,
+            "reason": "Standard inter-office communication regarding agricultural market summaries."
+        },
+        {
+            "row_number": 78,
+            "score": 0.05,
+            "reason": "Personal medical leave and vacation notification to colleagues."
+        },
+        {
+            "row_number": 79,
+            "score": 0.05,
+            "reason": "Business administrative email regarding invoice payment status and accounting inquiries."
+        },
+        {
+            "row_number": 80,
+            "score": 0.0,
+            "reason": "This is a legitimate professional correspondence between business contacts regarding scheduling and meeting coordination."
+        },
+        {
+            "row_number": 81,
+            "score": 0.0,
+            "reason": "This is a professional exchange regarding academic research, dissertation review, and professional networking."
+        },
+        {
+            "row_number": 82,
+            "score": 0.0,
+            "reason": "This is an internal workplace communication concerning recruiting strategy and human resources policies."
+        },
+        {
+            "row_number": 83,
+            "score": 0.0,
+            "reason": "This is a legitimate thread regarding travel, meeting logistics, and academic presentation coordination."
+        },
+        {
+            "row_number": 84,
+            "score": 1.0,
+            "reason": "This email displays classic spam characteristics: unsolicited marketing for advertising services, promises of 'extra revenues,' and include unsubscribe links for a mailing list."
+        },
+        {
+            "row_number": 85,
+            "score": 0.0,
+            "reason": "This is a standard internal corporate meeting invitation."
+        },
+        {
+            "row_number": 86,
+            "score": 0.0,
+            "reason": "This is a professional follow-up email from an academic to a business contact regarding a potential meeting."
+        },
+        {
+            "row_number": 87,
+            "score": 0.0,
+            "reason": "This is a legitimate professional coordination thread for scheduling a conference call."
+        },
+        {
+            "row_number": 88,
+            "score": 0.0,
+            "reason": "This is an internal professional request regarding the delegation of a task between colleagues."
+        },
+        {
+            "row_number": 89,
+            "score": 0.0,
+            "reason": "This is an internal administrative request regarding office equipment."
+        },
+        {
+            "row_number": 90,
+            "score": 0.95,
+            "reason": "Classic marketing spam: contains promotional language, unsolicited offers for business services, and clear calls to action (click here) typical of unsolicited commercial email."
+        },
+        {
+            "row_number": 91,
+            "score": 0.05,
+            "reason": "Internal business correspondence regarding hiring processes and resumes; clearly legitimate workplace communication."
+        },
+        {
+            "row_number": 92,
+            "score": 0.05,
+            "reason": "Internal office administrative email regarding the purchase and configuration of filing cabinets; legitimate business operation."
+        },
+        {
+            "row_number": 93,
+            "score": 0.05,
+            "reason": "Professional discussion regarding a working group meeting and technical metrics; context is legitimate organizational collaboration."
+        },
+        {
+            "row_number": 94,
+            "score": 0.05,
+            "reason": "Brief, internal business communication regarding an analysis request; standard professional correspondence."
+        },
+        {
+            "row_number": 95,
+            "score": 0.05,
+            "reason": "Internal corporate communication regarding year-end promotion nominations; clearly legitimate internal business process."
+        },
+        {
+            "row_number": 96,
+            "score": 0.05,
+            "reason": "Internal review of a patent/invention proposal by an expert, typical of corporate research operations."
+        },
+        {
+            "row_number": 97,
+            "score": 0.05,
+            "reason": "Business email regarding candidate interviewing and human resources coordination."
+        },
+        {
+            "row_number": 98,
+            "score": 0.05,
+            "reason": "Administrative coordination for an interview schedule; typical internal business logistics."
+        },
+        {
+            "row_number": 99,
+            "score": 0.1,
+            "reason": "Professional correspondence between colleagues or industry contacts regarding a published article reprint; does not exhibit spam characteristics."
+        },
+        {
+            "row_number": 100,
+            "score": 0.05,
+            "reason": "Professional business communication regarding a specific project, loan guarantees, and financial modeling."
+        },
+        {
+            "row_number": 101,
+            "score": 0.05,
+            "reason": "Internal corporate email regarding meeting scheduling; no indicators of spam."
+        },
+        {
+            "row_number": 102,
+            "score": 0.05,
+            "reason": "Personal correspondence between colleagues regarding a professional paper review."
+        },
+        {
+            "row_number": 103,
+            "score": 0.05,
+            "reason": "Official corporate organizational announcement regarding a new business unit."
+        },
+        {
+            "row_number": 104,
+            "score": 0.05,
+            "reason": "Internal administrative instructions regarding an employee departure and security protocols."
+        },
+        {
+            "row_number": 105,
+            "score": 0.05,
+            "reason": "Professional correspondence regarding an academic research collaboration and funding."
+        },
+        {
+            "row_number": 106,
+            "score": 0.98,
+            "reason": "Contains classic spam markers: hyperbolic claims ('astounding new software'), unsolicited promotional content, suspicious external links, and automated opt-out instructions typical of mass-mailing campaigns."
+        },
+        {
+            "row_number": 107,
+            "score": 0.05,
+            "reason": "Brief, context-specific internal email regarding a holiday greeting attachment."
+        },
+        {
+            "row_number": 108,
+            "score": 0.05,
+            "reason": "Professional business strategy discussion regarding LNG infrastructure and logistics."
+        },
+        {
+            "row_number": 109,
+            "score": 0.05,
+            "reason": "Official corporate compliance policy memo regarding restricted trading lists."
+        },
+        {
+            "row_number": 110,
+            "score": 0.05,
+            "reason": "Legitimate internal business communication regarding scheduling and part-time work arrangements."
+        },
+        {
+            "row_number": 111,
+            "score": 0.05,
+            "reason": "Professional correspondence regarding academic research and data requests for legitimate business purposes."
+        },
+        {
+            "row_number": 112,
+            "score": 0.05,
+            "reason": "Internal corporate email regarding a long-term demand forecast project and redirecting a query."
+        },
+        {
+            "row_number": 113,
+            "score": 0.05,
+            "reason": "Professional internal announcement regarding an academic visit and workshop presentation."
+        },
+        {
+            "row_number": 114,
+            "score": 0.05,
+            "reason": "Internal business email coordinating a summer internship offer and associated research project."
+        },
+        {
+            "row_number": 115,
+            "score": 0.95,
+            "reason": "Classic unsolicited spam content promoting a 'get rich without working' scheme, including common markers like 'compliance with US senate bill' and requests for blank emails."
+        },
+        {
+            "row_number": 116,
+            "score": 0.05,
+            "reason": "Internal team communication organizing a professional 'brown bag' lunch and learning series."
+        },
+        {
+            "row_number": 117,
+            "score": 0.1,
+            "reason": "Professional follow-up regarding an academic presentation. The low score is due to the legitimate nature of the sender, despite the presence of an automated Yahoo advertisement footer."
+        },
+        {
+            "row_number": 118,
+            "score": 0.05,
+            "reason": "Professional internal/external coordination regarding a university speaker series."
+        },
+        {
+            "row_number": 119,
+            "score": 0.05,
+            "reason": "Legitimate business correspondence regarding an employment offer and salary negotiations."
+        },
+        {
+            "row_number": 120,
+            "score": 0.95,
+            "reason": "Contains classic spam markers including unsolicited solicitation, repetitive phrases, and adult-oriented content."
+        },
+        {
+            "row_number": 121,
+            "score": 0.05,
+            "reason": "Business-related correspondence regarding a professional subscription renewal; exhibits legitimate professional communication patterns."
+        },
+        {
+            "row_number": 122,
+            "score": 0.05,
+            "reason": "Internal corporate communication regarding event scheduling and volunteer appreciation."
+        },
+        {
+            "row_number": 123,
+            "score": 0.05,
+            "reason": "Collaborative professional thread involving project sponsorship and academic coordination."
+        },
+        {
+            "row_number": 124,
+            "score": 0.1,
+            "reason": "Professional follow-up after a job interview; highly contextualized and non-commercial."
+        },
+        {
+            "row_number": 125,
+            "score": 0.05,
+            "reason": "Personal/Professional coordination involving delivery failure notifications and holiday greetings."
+        },
+        {
+            "row_number": 126,
+            "score": 0.98,
+            "reason": "Contains high-confidence spam markers: 'pre-approved' loan offer, financial urgency, and an external link to an obfuscated URL."
+        },
+        {
+            "row_number": 127,
+            "score": 0.05,
+            "reason": "Data-heavy professional analysis and internal work communication; completely lacks solicitation characteristics."
+        },
+        {
+            "row_number": 128,
+            "score": 0.99,
+            "reason": "Obvious spam; contains scrambled text, suspicious commercial links, and common pharmaceutical-related spam patterns."
+        },
+        {
+            "row_number": 129,
+            "score": 0.92,
+            "reason": "Unsolicited commercial marketing email promoting insurance services with commission incentives and 'remove from list' mechanics."
+        },
+        {
+            "row_number": 130,
+            "score": 0.05,
+            "reason": "Personal/Professional correspondence congratulating a colleague on a promotion. No indicators of unsolicited bulk email."
+        },
+        {
+            "row_number": 131,
+            "score": 0.05,
+            "reason": "Business-related internal communication regarding a project report. No spam characteristics identified."
+        },
+        {
+            "row_number": 132,
+            "score": 0.1,
+            "reason": "Legitimate administrative communication from an instructor regarding a course roster and system management. Tone is professional and context-specific."
+        },
+        {
+            "row_number": 133,
+            "score": 0.95,
+            "reason": "Clear solicitation for security software. Contains aggressive marketing language, urgency, and a suspicious external link typical of spam."
+        },
+        {
+            "row_number": 134,
+            "score": 0.9,
+            "reason": "Unsolicited promotional content for logo and design services. Utilizes typical sales pitches, call-to-action tactics, and mass-marketing style text."
+        },
+        {
+            "row_number": 135,
+            "score": 0.2,
+            "reason": "Professional newsletter content from a legitimate industry publication. While it contains many links, it is a solicited or niche subscription-based update."
+        },
+        {
+            "row_number": 136,
+            "score": 0.98,
+            "reason": "An automated bounce-back message that contains explicit spam content (Viagra advertisement) in the body of the forwarded original email."
+        },
+        {
+            "row_number": 137,
+            "score": 0.85,
+            "reason": "Promotional spam regarding debt cancellation services. Uses baiting language and questionable financial claims typical of fraudulent or unsolicited services."
+        },
+        {
+            "row_number": 138,
+            "score": 0.98,
+            "reason": "Another bounced message containing an explicit pharmaceutical spam advertisement. The presence of 'spam signature' metadata confirms the classification."
+        },
+        {
+            "row_number": 139,
+            "score": 0.95,
+            "reason": "Contains direct marketing for pharmaceutical products (generic Viagra/Cialis). This is a classic example of unsolicited spam despite the appended irrelevant quotes."
+        },
+        {
+            "row_number": 140,
+            "score": 0.05,
+            "reason": "Internal corporate communication regarding university recruiting events. Professional and relevant to business operations."
+        },
+        {
+            "row_number": 141,
+            "score": 0.95,
+            "reason": "Unsolicited promotional email offering SEO and website submission services; includes opt-out language typical of spam."
+        },
+        {
+            "row_number": 142,
+            "score": 0.02,
+            "reason": "Internal professional thread regarding conference sponsorship and logistics. Zero indicators of spam."
+        },
+        {
+            "row_number": 143,
+            "score": 0.98,
+            "reason": "Classic mortgage/financial solicitation spam featuring low-quality grammar ('mort . . gage') and external links for lead generation."
+        },
+        {
+            "row_number": 144,
+            "score": 0.85,
+            "reason": "Cold outreach offering payment for participating in focus groups; common template for lead-collection spam."
+        },
+        {
+            "row_number": 145,
+            "score": 0.05,
+            "reason": "Internal business correspondence regarding software access and IT procedures. Legitimate email."
+        },
+        {
+            "row_number": 146,
+            "score": 0.95,
+            "reason": "Unsolicited B2B marketing email from a third-party lead generation service; contains standard removal requests."
+        },
+        {
+            "row_number": 147,
+            "score": 0.05,
+            "reason": "Personalized professional follow-up after an interview. Legitimate business communication."
+        },
+        {
+            "row_number": 148,
+            "score": 0.05,
+            "reason": "Internal project coordination regarding web accessibility standards. Clearly legitimate business correspondence."
+        },
+        {
+            "row_number": 149,
+            "score": 0.08,
+            "reason": "Forwarded internal email chain regarding university recruitment coordination; contains no spam markers."
+        },
+        {
+            "row_number": 150,
+            "score": 0.05,
+            "reason": "Internal corporate communication regarding academic/grading guidelines; contains no characteristics of unsolicited bulk email."
+        },
+        {
+            "row_number": 151,
+            "score": 0.05,
+            "reason": "Professional feedback email regarding a work presentation; clearly legitimate business correspondence."
+        },
+        {
+            "row_number": 152,
+            "score": 0.05,
+            "reason": "Academic inquiry from a PhD student to a professional; contains formal language and clear professional context."
+        },
+        {
+            "row_number": 153,
+            "score": 0.05,
+            "reason": "Threaded correspondence regarding scheduling and coordinating a business meeting; authentic inter-office or external professional communication."
+        },
+        {
+            "row_number": 154,
+            "score": 0.1,
+            "reason": "Official corporate HR notification regarding performance management; contains login credentials, but the context is clearly internal company policy."
+        },
+        {
+            "row_number": 155,
+            "score": 0.98,
+            "reason": "High-interest financial offer, promises of easy approval, 'click here' call-to-actions, and an unsubscribe clause are classic indicators of spam/solicited financial fraud."
+        },
+        {
+            "row_number": 156,
+            "score": 0.05,
+            "reason": "Professional invitation to serve on an advisory committee from an academic institution; legitimate correspondence."
+        },
+        {
+            "row_number": 157,
+            "score": 0.95,
+            "reason": "Promotional 'free trial' offer with aggressive marketing language and an unsubscribe footer typical of unsolicited bulk spam."
+        },
+        {
+            "row_number": 158,
+            "score": 0.05,
+            "reason": "Professional networking email regarding industry trends and business deals between known professional contacts."
+        },
+        {
+            "row_number": 159,
+            "score": 0.99,
+            "reason": "Classic spam template offering discounted, likely pirated, software with multiple red flags including excessive exclamation marks, poor formatting, and aggressive sales pitches."
+        },
+        {
+            "row_number": 160,
+            "score": 0.0,
+            "reason": "Internal business communication regarding office equipment maintenance and procurement."
+        },
+        {
+            "row_number": 161,
+            "score": 0.0,
+            "reason": "Legitimate professional email discussing project management, technical modelling, and team coordination within an organization."
+        },
+        {
+            "row_number": 162,
+            "score": 0.0,
+            "reason": "Professional correspondence regarding academic research cooperation and meeting scheduling."
+        },
+        {
+            "row_number": 163,
+            "score": 0.0,
+            "reason": "Professional inquiry and response regarding financial risk management methodologies."
+        },
+        {
+            "row_number": 164,
+            "score": 0.0,
+            "reason": "Personal/Professional status update regarding a job interview cancellation."
+        },
+        {
+            "row_number": 165,
+            "score": 0.0,
+            "reason": "Internal corporate newsletter detailing department highlights, news, and personnel updates."
+        },
+        {
+            "row_number": 166,
+            "score": 0.0,
+            "reason": "Professional follow-up email regarding a past visit and future meeting arrangements."
+        },
+        {
+            "row_number": 167,
+            "score": 0.0,
+            "reason": "Analytical report containing industry news, financial analysis, and market research relevant to professional operations."
+        },
+        {
+            "row_number": 168,
+            "score": 1.0,
+            "reason": "Classic unsolicited spam content promoting a 'credit repair' service, characterized by aggressive marketing, dubious links, and obfuscated text patterns."
+        },
+        {
+            "row_number": 169,
+            "score": 0.1,
+            "reason": "System-generated delivery failure notification; while often annoying, it is a functional service message rather than malicious commercial spam."
+        },
+        {
+            "row_number": 170,
+            "score": 0.0,
+            "reason": "Professional internal business communication regarding trading strategies; no indicators of spam."
+        },
+        {
+            "row_number": 171,
+            "score": 0.0,
+            "reason": "Legitimate business correspondence regarding meeting materials; contextual consistency confirms it is non-spam."
+        },
+        {
+            "row_number": 172,
+            "score": 0.0,
+            "reason": "Internal corporate email discussing conference speakers; lacks any promotional or unsolicited commercial content."
+        },
+        {
+            "row_number": 173,
+            "score": 0.0,
+            "reason": "Internal HR-related communication regarding recruitment of summer interns; clearly legitimate business traffic."
+        },
+        {
+            "row_number": 174,
+            "score": 0.0,
+            "reason": "Operational business email regarding interview candidates; devoid of commercial marketing indicators."
+        },
+        {
+            "row_number": 175,
+            "score": 0.0,
+            "reason": "Technical project management and data analysis coordination; typical professional workplace interaction."
+        },
+        {
+            "row_number": 176,
+            "score": 1.0,
+            "reason": "Classic spam characteristics: nonsensical word strings, pharmaceutical marketing, claims of deep discounts, and high volume/worldwide shipping offers."
+        },
+        {
+            "row_number": 177,
+            "score": 0.0,
+            "reason": "Routine corporate scheduling email regarding a professional visit; no spam markers detected."
+        },
+        {
+            "row_number": 178,
+            "score": 0.95,
+            "reason": "Promotes prescription medications with generic marketing claims and randomized philosophical filler text common in spam filters to bypass detection."
+        },
+        {
+            "row_number": 179,
+            "score": 1.0,
+            "reason": "Clear commercial advertisement for intrusive software, containing typical spam hallmarks like 'click here' links, opt-out claims, and solicitation of personal info."
+        }
+    ]
+}
