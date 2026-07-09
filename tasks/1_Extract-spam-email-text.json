@@ -2,7 +2,7 @@
     "taskId": 1,
     "taskName": "Extract spam email text",
     "fileName": "1_Extract-spam-email-text.csv",
-    "rows_predicted": 540,
+    "rows_predicted": 500,
     "best_model_metricts": {
         "message": "Model trained on 70% / Validated on 30% (Text only, BayesianRidge)",
         "data_split_info": {
